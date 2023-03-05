@@ -1,0 +1,288 @@
+#root {
+  margin: 0 auto;
+
+  font-family: Cybersky Free Trial;
+}
+
+.logo {
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.navbar {
+  border-bottom: 1px rgba(126, 126, 126, 0.329);
+  position: sticky;
+  top: 0;
+}
+
+.navbar .container,
+.navbar .container-fluid,
+.navbar .container-lg,
+.navbar .container-md,
+.navbar .container-sm,
+.navbar .container-xl {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.logoText {
+  font-size: 22pt;
+  margin-left: 10px;
+  font-family: Cybersky Free Trial;
+  color: #3987cb;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .site-menu {
+  margin: 0 auto;
+}
+
+.site-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navBarButton {
+  font-family: Cybersky Free Trial;
+  background: #000644;
+  border: 2px solid rgb(37, 52, 234);
+  will-change: filter;
+  transition-duration: 0.5s;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.navBarButton:hover {
+  border: 2px solid rgb(101, 112, 238);
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.navBarButton.react.hover {
+  border: 2px solid rgb(101, 112, 238);
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.navBarButton a {
+  text-decoration: none;
+  color: ghostwhite;
+}
+
+.navBarButton a:hover {
+  text-decoration: none;
+  color: ghostwhite;
+}
+
+.navBarItem {
+  font-family: Cybersky Free Trial;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0;
+  list-style: none;
+
+  box-sizing: border-box;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.navBarItem a h3 {
+  font-family: Cybersky Free Trial;
+  font-weight: bold;
+}
+
+.navBarItem a::before {
+  bottom: 0;
+  display: block;
+  height: 3px;
+  width: 0%;
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  transition-duration: 0.5s;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.navBarItem a:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.navBarItem a::after {
+  left: 0;
+  top: 0;
+  padding: 0.5em 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: #ffffff;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+
+.navBarItem a:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.normalText {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.navStick {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0px;
+  z-index: 100;
+  background-color: #000644;
+  background-image: radial-gradient(at 100% 100%, #000644 0, transparent 50%),
+    radial-gradient(at 200% 0%, hsl(224.7, 38.6%, 30%) 0, transparent 50%),
+    radial-gradient(at -20% 20%, hsl(339.2, 49%, 30%) 0, transparent 50%);
+  box-shadow: 0 0 10px #ebf798bd;
+  
+}
+
+.InFromUP{
+  animation: InUP 1s linear;
+  -webkit-animation: InUP 1s linear;
+}
+
+.OutFormUP{
+  animation: OutUP 1s linear alternate;
+  -webkit-animation: InUP 1s linear;
+}
+
+@keyframes InUP {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes OutUP {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -200 !important;
+  }
+}
+
+.smooth-transition {
+  transition: all 0.1s ease-in-out;
+}
+
+/* Welcome Styles */
+.welcomeTableColumn {
+  width: calc((100% - 6rem) / 2);
+  float: left;
+}
+.welcomeLogo {
+  position: relative;
+  top: 0%;
+  max-width: 100%;
+}
+
+.SpinClockWise {
+  animation: spinsClockWise 15s linear infinite;
+}
+
+.SpinClockBack {
+  animation: spinsClockBack 15s linear infinite;
+}
+
+.SpaceSpinClockWise {
+  animation: spinsClockWise 45s linear infinite;
+}
+
+.SpaceSpinClockBack {
+  animation: spinsClockBack 35s linear infinite;
+}
+
+@-moz-keyframes spinsClockWise {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinsClockWise {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spinsClockWise {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinsClockBack {
+  0% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinsClockBack {
+  0% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spinsClockBack {
+  0% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
