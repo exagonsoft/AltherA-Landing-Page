@@ -26,7 +26,6 @@ const testValue = () => {
 };
 
 const Welcome = () => {
-  const [days, hours, minutes, seconds] = useCountdown("2023/01/01");
   return (
     <section>
       <div className="flex w-full flex-wrap justify-center items-center">

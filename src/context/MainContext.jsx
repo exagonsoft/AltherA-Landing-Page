@@ -43,7 +43,7 @@ export const MainContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    checkIfWalletIsConnected();
+    //checkIfWalletIsConnected();
   }, []);
 
   return (

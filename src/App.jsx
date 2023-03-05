@@ -1,4 +1,3 @@
-import { CardanoWallet } from "@meshsdk/react";
 import { useEffect, useState } from "react";
 import "./App.css";
 import About from "./components/About";
@@ -35,9 +34,8 @@ function App() {
       <div className="gradient-bg-welcome">
         <NavBar navClass={steakNav}/>
         <Welcome />
-        <CardanoWallet />
       </div>
-      {/* <About /> */}
+      <About />
     </div>
   );
 }
