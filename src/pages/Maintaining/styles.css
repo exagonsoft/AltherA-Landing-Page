@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.PendingContainer {
+  position: fixed;
+  z-index: 99999;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/images/globe-700.jpg");
+  animation: BackgrundParalax 3s linear infinite;
+  -webkit-animation: BackgrundParalax 3s linear infinite;
+  backdrop-filter: blur(15px);
+  background-size: cover;
+  -webkit-animation: fall 1s linear;
+  animation: fall 1s linear;
+}
+
+.PendingWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(25px);
+}
+
+.PendingTitle {
+  line-height: 1.1em;
+  text-align: center;
+  font-size: 100px;
+  letter-spacing: 0.1em;
+  font: normal normal bold 80px/1.2em opensanshebrewcondensed-regular,
+    sans-serif !important;
+  color: rgb(255, 255, 255);
+}
+
+.PendingCloseButtton {
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: large;
+  font-weight: bolder;
+  padding: 5px 30px;
+  border: 1px solid;
+  border-radius: 10px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  box-shadow: #515e53 0px 0px 3px 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.PendingCloseButtton:hover {
+  box-shadow: #515e53 0px 0px 5px 5px;
+}
+
+.PendingCloseButtton:active {
+  box-shadow: inset #515e53 0px 0px 3px 3px;
+}
+
+.PendingProgressArea {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.PendingProgressTitle {
+  letter-spacing: 0.5em;
+  text-align: center;
+  font: normal normal normal 15px/1.4em avenir-lt-w01_35-light1475496,
+    avenir-lt-w05_35-light, sans-serif !important;
+  color: rgb(255, 255, 255);
+}
+
+.PendingProgressBar {
+  width: 90%;
+  display: flex;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  margin-top: 20px;
+  height: 15px;
+}
+
+.PendingProgressBarFill {
+  width: 45%;
+  background: #088f25;
+  border-radius: 5px 0 0 5px;
+  -webkit-animation: fillProgress 5s linear;
+  animation: fillProgress 5s linear;
+}
+
+.PendingProgressBarValuesContainer {
+  margin-top: 5px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.PendingProgressBarValues {
+  color: white;
+}
+
+.PendingContactArea {
+  width: 60%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.PendingContactButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin-bottom: 5px;
+  cursor: pointer;
+  padding: 10px 5px;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: #515e53 0px 0px 3px 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.PendingContactButtons:hover {
+  border: 1px solid #088f25;
+  box-shadow: #515e53 0px 0px 5px 5px;
+}
+
+.PendingCopiRigth {
+  position: absolute;
+  bottom: 10px;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+@keyframes fall {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes fillProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+@keyframes BackgrundParalax {
+  0%{
+    background-image: url("../../assets/images/globe.jpg");
+  }
+  100%{
+    background-image: url("../../assets/images/globe-700.jpg");
+  }
+}

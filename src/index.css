@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "GROBOLD";
   src: local("GROBOLD"), url(./assets/Fonts/GROBOLD.ttf) format("truetype");
@@ -271,6 +275,4 @@ body {
   margin-top: -150px;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+

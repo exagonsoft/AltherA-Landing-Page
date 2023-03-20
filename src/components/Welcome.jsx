@@ -1,7 +1,6 @@
 import React from "react";
 import { FaBook } from "react-icons/fa";
 import { BsBriefcaseFill, BsCurrencyExchange, BsFillShieldLockFill, BsPeopleFill, BsPersonBadgeFill } from "react-icons/bs";
-import { useCountdown } from "../hooks/useCountDown";
 
 import WelcomeSpinner from "./WellComeComponents/WelcomeSpinner";
 
@@ -41,7 +40,7 @@ const Welcome = () => {
             </p>
             <div className="w-full p-8 mt-10 bg-[#0059ad2c] rounded-xl">
               <div className="text-center mb-4">
-                <h1 className="text-xl">What are we Offering</h1>
+                <h1 className="text-xl text-white">What are we Offering</h1>
               </div>
               <div className="flex md:flex-row flex-col md:justify-between justify-center items-center">
                 <div className="rounded-xl bg-[#00b1d7] pw-4 py-5 text-center items-center h-1/2 w-3/4 md:mb-0 mb-2 md:w-1/5 bg-gradient-to-l from-[#00b0d7d3] to-[#00b0d7c7] shadow-lg shadow-cyan-500/50">
@@ -82,7 +81,6 @@ const Welcome = () => {
           </div>
         </div>
       </div>
-      <input value={testValue()} />
     </section>
   );
 };

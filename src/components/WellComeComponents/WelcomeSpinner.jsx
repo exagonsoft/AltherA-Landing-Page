@@ -4,9 +4,10 @@ import LogoAltheraSpinner01 from "../../assets/images/LogoAltheraSpinner01.webp"
 import LogoAltheraSpinner02 from "../../assets/images/LogoAltheraSpinner02.webp";
 import LogoAltheraSpinner05 from "../../assets/images/LogoAltheraSpinner05.webp";
 
-const WelcomeSpinner = () => {
+const WelcomeSpinner = (props) => {
+  const {speenerMinWidt = "60%", speenerWith = "70%"} = props
   return (
-    <div className="flex flex-col justify-center relative mt-8  md:w-[60%] w-[70%]">
+    <div className={`flex flex-col justify-center relative mt-8  md:w-[60%] w-[70%]`}>
       <div className="flex justify-center relative z-[7]">
         <img
           src={LogoAlthera}
@@ -28,14 +29,14 @@ const WelcomeSpinner = () => {
           className="SpinClockWise opacity-80  max-w-[100%] relative "
         />
       </div>
-      <div className="flex justify-center -mt-[96%] relative z-[3] md:flex">
+      <div className="flex justify-center md:-mt-[110%] -mt-[96%] relative z-[3] md:flex">
         <img
           src={LogoAltheraSpinner05}
           alt="Logo Spinner"
-          className="SpaceSpinClockWise opacity-90  max-w-[90%] relative "
+          className="SpaceSpinClockWise opacity-90  md:max-w-[125%] max-w-[100%] relative "
         />
       </div>
-      <div className="flex justify-center -mt-[96%] relative z-[3] md:flex ">
+      <div className="flex justify-center  md:-mt-[110%] -mt-[96%] relative z-[2] md:flex ">
         <img
           src={LogoAltheraSpinner05}
           alt="Logo Spinner"

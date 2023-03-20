@@ -1,7 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   margin: 0 auto;
 
   font-family: Cybersky Free Trial;
+}
+
+.MainBackGround{
+  position: fixed;
+  z-index: 99999;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  animation: BackgrundParalax 10s linear infinite;
+  -webkit-animation: BackgrundParalax 10s linear infinite;
+  backdrop-filter: blur(15px);
+  background-size: cover;
+}
+
+.BackGroundWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(25px);
 }
 
 .logo {
@@ -219,6 +245,15 @@
   }
   100% {
     top: -200 !important;
+  }
+}
+
+@keyframes BackgrundParalax {
+  0%{
+    background-image: url("../assets/images/globe.jpg");
+  }
+  100%{
+    background-image: url("../assets/images/globe-700.jpg");
   }
 }
 

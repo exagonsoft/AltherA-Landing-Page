@@ -4,10 +4,11 @@ import About from "./components/About";
 import NavBar from "./components/NavBar";
 import WalletConnector from "./components/WalletConnector/WalletConnector";
 import Welcome from "./components/Welcome";
+import Maintain from "./pages/Maintaining/maintain";
 
 const navClass = {
   normalState: "nav navbar smooth-transition w-full flex md:justify-center justify-between items-center p-2",
-  scrollDownState: "nav navStick InFromUP fixed smooth-transition  navbar w-full flex md:justify-center justify-between items-center p-2",
+  scrollDownState: "nav navStick InFromUP !fixed smooth-transition  navbar w-full flex md:justify-center justify-between items-center p-2",
   scrollUpState: "nav navStick OutFormUP fixed smooth-transition  navbar w-full flex md:justify-center justify-between items-center p-2"
 }
 
@@ -30,12 +31,12 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      {/* <WalletConnector /> */}
-      <div className="gradient-bg-welcome">
+      {/* <div className="gradient-bg-welcome">
         <NavBar navClass={steakNav}/>
         <Welcome />
       </div>
-      <About />
+      <About /> */}
+      <Maintain speenerWith = {"70%"} speenerMinWidt={"60%"}/>
     </div>
   );
 }
