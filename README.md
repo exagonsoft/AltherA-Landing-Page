@@ -1,6 +1,4 @@
-# 
-The Landing Page for the AltherA Metaverse
-
+<div style="display:flex; justify-content:center; align-items:center;">
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -8,6 +6,8 @@ The Landing Page for the AltherA Metaverse
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+
+</div>
 
 
 
