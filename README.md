@@ -14,8 +14,8 @@ The Landing Page for the AltherA Metaverse
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/exagonsoft/AltherA-Landing-Page">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://althera-verse.com">
+    <img src="src/assets/images/LogoAlthera.png" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">AltherA-Landing-Page</h3>
