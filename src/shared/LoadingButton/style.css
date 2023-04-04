@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.LoginSpinLoader {
+    --tw-border-opacity: 1;
+    border-color: rgb(185 28 28 / var(--tw-border-opacity));
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right: 0;
+    border-radius: 9999px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    width: 16px;
+    height: 16px;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }

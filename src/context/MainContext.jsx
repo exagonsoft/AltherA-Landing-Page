@@ -6,6 +6,7 @@ const { ethereum } = window;
 export const MainContextProvider = ({ children }) => {
   const [currentAccount, setCurrentAccount] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [toastNotificationList, setToastNotificationList] = useState([])
   const checkIfWalletIsConnected = async () => {
     try {
       if (!ethereum) return alert("Please install Metamask");
@@ -35,6 +36,14 @@ export const MainContextProvider = ({ children }) => {
     }
   };
 
+  const pushNotification = (_notification, message = null) => {
+    let _new_toast = {
+      type: _notification,
+      text: message
+    }
+    setToastNotificationList([...toastNotificationList, _new_toast])
+  }
+
   const walletAccountChange = async (accounts) => {
     if (currentAccount !== accounts[0] && currentAccount !== "") {
       setCurrentAccount(accounts[0]);
@@ -53,6 +62,9 @@ export const MainContextProvider = ({ children }) => {
         currentAccount,
         isLoading,
         walletAccountChange,
+        toastNotificationList,
+        pushNotification,
+        setToastNotificationList
       }}
     >
       {children}

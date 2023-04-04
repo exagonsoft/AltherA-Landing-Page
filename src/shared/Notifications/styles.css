@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.notification-container {
+    font-size: 14px;
+    box-sizing: border-box;
+    position: fixed !important;
+    z-index: 9999;
+  }
+  
+  .EXToast {
+    position: relative !important;
+    width: 350px;
+    max-width: 350px;
+    overflow: hidden;
+    font-size: 0.875rem;
+    background-clip: padding-box;
+    border: 1px solid;
+    box-shadow: 0 0.25rem 2rem 2px rgb(0 0 21 / 50%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 0, 21, 0.1);
+  }
+  
+  .notification {
+    display: flex;
+    flex-direction: column;
+    font-family: fantasy;
+    font-style: oblique;
+    font-size: medium;
+    color: white;
+  }
+  
+  .notification_wrapper {
+    display: flex;
+  }
+  
+  .notificationCountDownContainer {
+    display: flex;
+    height: 5px;
+    width: 100%;
+  }
+  
+  .notificationCountDownBar {
+    background-color: rgb(247, 243, 41);
+    transition: transform 1s ease-in-out;
+    animation: toast-countdown 4s linear;
+    -webkit-animation: toast-countdown 4s linear;
+  }
+  
+  .notification_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .notification_icon {
+    width: 30px !important;
+    height: 30px;
+  }
+  
+  .notification_title {
+    margin: 10px 0;
+  }
+  
+  .notification_description {
+    margin: 0 0 5px 0;
+  }
+  
+  .notification_button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  
+  .notification_button:focus {
+    border: none;
+  }
+  
+  .top-right {
+    top: 12px;
+    right: 12px;
+    transition: transform 1s ease-in-out;
+    animation: toast-in-right 0.7s linear;
+    -webkit-animation: toast-in-right 0.7s linear;
+  }
+  
+  .bottom-right {
+    bottom: 12px;
+    right: 12px;
+    transition: transform 0.6s ease-in-out;
+    animation: toast-in-right 0.7s;
+  }
+  
+  .top-left {
+    top: 12px;
+    left: 12px;
+    transition: transform 0.6s ease-in;
+    animation: toast-in-left 0.7s;
+  }
+  
+  .bottom-left {
+    bottom: 12px;
+    left: 12px;
+    transition: transform 1s ease-in;
+    animation: toast-in-left 0.7s linear;
+    -webkit-animation: toast-in-left 0.7s linear;
+  }
+  
+  @keyframes toast-in-right {
+    0% {
+      right: -100vh;
+    }
+    100% {
+      right: 12px;
+    }
+  }
+  
+  @keyframes toast-countdown {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
