@@ -1,0 +1,6 @@
+export const AboutAccordionTexts = [
+  { header: "All Games are NFT-Based", body: "Our platform is built entirely around NFTs, providing a new level of ownership and value to players. All games within our ecosystem are NFT-based, ensuring that every asset and item is unique, tradable, and truly yours." },
+  { header: "Centralized Location for Gamers", body: "Our ecosystem provides a centralized location for gamers to discover and play new NFT-based play-to-earn games. With a focus on quality and innovation, we strive to create a diverse and engaging library of NFT-based play-to-earn games for all types of players." },
+  { header: "Community-Driven Development", body: "We believe that the best NFT-based play-to-earn games are made with input from the community. That's why we encourage players to provide feedback and suggestions throughout the development process. By working together, we can create games that are truly tailored to the needs and desires of our community." },
+  { header: "Empowered Community", body: "In addition to providing feedback on individual games, we empower our community to propose changes and improvements to the ecosystem as a whole. By submitting proposals and participating in community votes, players can help shape the direction of our platform and ensure that it remains a vibrant and inclusive space for all." },
+];

@@ -29,7 +29,7 @@ const Welcome = () => {
     <section>
       <div className="flex w-full flex-wrap justify-center items-center">
         <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
-          <div className="flex flex-1 md:justify-start  justify-center items-center flex-col md:mr-10 ">
+          <div className="FadeIn flex flex-1 md:justify-start  justify-center items-center flex-col md:mr-10 ">
             <h1 className="text-3xl items sm:text-5xl text-white text-gradient py-1">
               New crypto <br /> Ecosystem Philosophy
             </h1>
@@ -76,7 +76,7 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-1 justify-center items-center flex-col md:mr-10 ">
+          <div className="FadeIn flex flex-1 justify-center items-center flex-col md:mr-10 ">
             <WelcomeSpinner />
           </div>
         </div>

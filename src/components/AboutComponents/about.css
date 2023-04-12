@@ -5,3 +5,7 @@
 .HorizontDiv {
     background: url(../../assets/images/aboutSection.webp);
 }
+
+.HorizontDivDetail {
+    background: url(../../assets/images/crosslines.png);
+}

@@ -7,7 +7,7 @@ import { NavBarMobile } from "./NavBarComponents/NavBarMovile";
 import { NavBarItems } from "./NavBarComponents/NavBarItems";
 
 const NavBar = (props) => {
-  const { navClass } = props;
+  const { navClass, id } = props;
   const menuItems = NavBarItems;
   const { currentAccount, walletAccountChange } = useContext(MainContext);
   const [actionButtonText, setActionButtonText] = useState("Connect to Wallet");
@@ -26,7 +26,7 @@ const NavBar = (props) => {
 
   return (
     <>
-      <nav className={navClass}>
+      <nav id={id} className={navClass}>
         <div className="md:flex-[0.5] logo flex flex-initial justify-center items-center">
           <div>
             <img src={logo} alt="Logo" className="w-20 cursor-pointer" />
