@@ -58,7 +58,7 @@ function App() {
         toastList={toastNotificationList}
         closeToast={removeToast}
       ></EXNotification>
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-x-hidden">
         <div className="gradient-bg-welcome">
           <NavBar id="fixed" navClass={fixedNav} />
           <NavBar id="dinamic" navClass={steakNav} />

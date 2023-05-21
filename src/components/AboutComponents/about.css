@@ -9,3 +9,57 @@
 .HorizontDivDetail {
     background: url(../../assets/images/crosslines.png);
 }
+
+/* Show animation */
+@keyframes slide-in-left {
+    from {
+      transform: translateX(-120%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(120%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Hide animation */
+  @keyframes slide-out-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-120%);
+    }
+  }
+  
+  @keyframes slide-out-right {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(120%);
+    }
+  }
+  
+  .anim-from-left {
+    animation: slide-in-left 1s forwards;
+  }
+  
+  .anim-from-right {
+    animation: slide-in-right 1s forwards;
+  }
+  
+  .anim-from-left-hide {
+      animation: slide-out-left 1s forwards;
+    }
+    
+    .anim-from-right-hide {
+      animation: slide-out-right 1s forwards;
+    }

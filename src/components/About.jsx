@@ -1,25 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./AboutComponents/about.css";
 import { GetRandomPicture, about } from "../assets/images/pictures";
 import ExAccordion from "../shared/DropDownTexts/ExAcordion";
 import { AboutAccordionTexts } from "./AboutComponents/AboutAcordion";
 
 const About = (props) => {
-  const { play } = props;
-
-  const VideoControll = () => {
-    let videoMetaverse = document.getElementById("vidMetaverse");
-    console.log(play);
-    if (play) {
-      videoMetaverse.play();
+  const [showDivs, setShowDivs] = useState(false);
+  const HandleScroll = () => {
+    const currentPosition = window.scrollY;
+    const showPosition = 450;
+    const hidePosition = 2000;
+    console.log(currentPosition)
+    if (currentPosition >= showPosition && currentPosition <= hidePosition) {
+      setShowDivs(true);
     } else {
-      videoMetaverse.pause();
+      setShowDivs(false);
     }
   };
 
   useEffect(() => {
-    //VideoControll();
-  }, [play]);
+    window.addEventListener('scroll', HandleScroll);
+
+    return () => window.removeEventListener('scroll', HandleScroll);
+  }, [])
 
   return (
     <section className=" relative z-10">
@@ -28,14 +31,14 @@ const About = (props) => {
           <div className=" md:min-h-[450px] min-h-[300px] w-full bg-cover bg-repeat-round HorizontDiv"></div>
           <div className="flex justify-between w-full -mt-72">
             <div className="HorizontDivDetail md:mt-10 mt-0 bg-cover w-full flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
-              <div className="flex flex-1 md:justify-start  justify-center items-center flex-col md:mr-10 ">
+              <div className={`flex flex-1 md:justify-start  justify-center items-center flex-col md:mr-10 ${showDivs ? 'anim-from-left' : 'anim-from-left-hide'}`}>
                 <img
                   src={GetRandomPicture()}
                   alt="Metaverse"
                   className=" w-10/12"
                 />
               </div>
-              <div className="flex flex-1 justify-center items-center flex-col md:mr-10 ">
+              <div className={`flex flex-1 justify-center items-center flex-col md:mr-10 ${showDivs ? 'anim-from-right' : 'anim-from-right-hide'}`}>
                 <h1 className="text-3xl md:text-right text-left items sm:text-5xl text-white text-gradient py-1">
                   Play-to-Earn Game Ecosystem!
                 </h1>

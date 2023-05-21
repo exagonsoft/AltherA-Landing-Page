@@ -3,7 +3,6 @@ import shopping from "./shopping.gif";
 import screens from "./screens.gif";
 import shutter from "./shutter.gif";
 import driving from "./driving.gif";
-import playtoearn01 from "./playtoearn01.png";
 import gamestrofies from "./gamestrofies.png"
 
 const pictureMap = {
@@ -11,8 +10,7 @@ const pictureMap = {
     2: screens,
     3: shutter,
     4: driving,
-    5: playtoearn01,
-    6: gamestrofies
+    5: gamestrofies,
   };
 
 export {
@@ -21,7 +19,6 @@ export {
     screens,
     shutter,
     driving,
-    playtoearn01,
     gamestrofies
 }
 
