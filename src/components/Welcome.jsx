@@ -1,35 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaBook } from "react-icons/fa";
-import { BsBriefcaseFill, BsCurrencyExchange, BsFillShieldLockFill, BsPeopleFill, BsPersonBadgeFill } from "react-icons/bs";
+import {
+  BsBriefcaseFill,
+  BsCurrencyExchange,
+  BsFillShieldLockFill,
+  BsPeopleFill,
+  BsPersonBadgeFill,
+} from "react-icons/bs";
 
 import WelcomeSpinner from "./WellComeComponents/WelcomeSpinner";
-
-const header = "token_header";
-let date = new Date();
-const payload = {
-  user_id: 55,
-  user_name: 'Alvaro',
-  expire_Date: date.setTime(date.getTime() + 12 * 60 * 60 * 1000),
-};
-const serial = Math.random() * 1000;
-
-const testValue = () => {
-  let header_token = btoa(header);
-  let bufferString = JSON.stringify(payload);
-  let encodedAccessToken = btoa(bufferString);
-  let serial_token = btoa(serial);
-
-  let object_tt = JSON.parse(bufferString);
-
-  return header_token + "." + encodedAccessToken + "." + serial_token;
-};
+import "./WellComeComponents/style.css"
 
 const Welcome = () => {
+  const [showDivs, setShowDivs] = useState(false);
+  const HandleScroll = () => {
+    const currentPosition = window.scrollY;
+    const showPosition = 600;
+    const hidePosition = 1000;
+    console.log(currentPosition)
+    if (currentPosition >= showPosition) {
+      setShowDivs(true);
+    } else {
+      setShowDivs(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', HandleScroll);
+
+    return () => window.removeEventListener('scroll', HandleScroll);
+  }, [])
+  
+
   return (
     <section>
       <div className="flex w-full flex-wrap justify-center items-center">
         <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
-          <div className="flex flex-1 md:justify-start  justify-center items-center flex-col md:mr-10 ">
+          <div className={` flex flex-1 md:justify-start  justify-center items-center flex-col md:mr-10 ${showDivs ? 'anim-from-left-hide' : 'anim-from-left'}`}>
             <h1 className="text-3xl items sm:text-5xl text-white text-gradient py-1">
               New crypto <br /> Ecosystem Philosophy
             </h1>
@@ -44,19 +51,27 @@ const Welcome = () => {
               </div>
               <div className="flex md:flex-row flex-col md:justify-between justify-center items-center">
                 <div className="rounded-xl bg-[#00b1d7] pw-4 py-5 text-center items-center h-1/2 w-3/4 md:mb-0 mb-2 md:w-1/5 bg-gradient-to-l from-[#00b0d7d3] to-[#00b0d7c7] shadow-lg shadow-cyan-500/50">
-                  <p className="normalText flex justify-center text-3xl mb-2 font-extrabold"><BsFillShieldLockFill /></p>
+                  <p className="normalText flex justify-center text-3xl mb-2 font-extrabold">
+                    <BsFillShieldLockFill />
+                  </p>
                   <p>Secure</p>
                 </div>
                 <div className="rounded-xl flex  flex-col justify-center bg-[#8511b5] pw-4 py-5 text-center items-center h-1/2 w-3/4 md:mb-0 mb-2 md:w-1/5 bg-gradient-to-l from-[#9c20ced3] to-[#cf90d4c7] shadow-lg shadow-purple-500/50">
-                  <p className="normalText text-3xl mb-2 font-extrabold"><BsBriefcaseFill /></p>
+                  <p className="normalText text-3xl mb-2 font-extrabold">
+                    <BsBriefcaseFill />
+                  </p>
                   <p>Probity</p>
                 </div>
                 <div className="rounded-xl flex  flex-col justify-center bg-[#08b7fd] pw-4 py-5 text-center items-center h-1/2 w-3/4 md:mb-0 mb-2 md:w-1/5 bg-gradient-to-l from-[#0599d3d3] to-[#0599d3c7] shadow-lg shadow-teal-500/50">
-                  <p className="normalText text-3xl mb-2 font-extrabold"><BsPersonBadgeFill /></p>
+                  <p className="normalText text-3xl mb-2 font-extrabold">
+                    <BsPersonBadgeFill />
+                  </p>
                   <p>Engage</p>
                 </div>
                 <div className="rounded-xl flex  flex-col justify-center bg-[#0a6eff] pw-4 py-5 text-center items-center h-1/2 w-3/4 md:mb-0 mb-2 md:w-1/5 bg-gradient-to-l from-[#0a6effd3] to-[#0a6effc7] shadow-lg shadow-blue-500/50">
-                  <p className="normalText text-3xl mb-2 font-extrabold"><BsCurrencyExchange /></p>
+                  <p className="normalText text-3xl mb-2 font-extrabold">
+                    <BsCurrencyExchange />
+                  </p>
                   <p>Earnings</p>
                 </div>
               </div>
@@ -76,7 +91,7 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-1 justify-center items-center flex-col md:mr-10 ">
+          <div className={` flex flex-1 justify-center items-center flex-col md:mr-10 ${showDivs ? 'anim-from-right-hide' : 'anim-from-right'}`}>
             <WelcomeSpinner />
           </div>
         </div>

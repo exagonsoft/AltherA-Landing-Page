@@ -232,6 +232,16 @@
   -webkit-animation: InUP 1s linear;
 }
 
+.FadeIn{
+  animation: FadeIn 1.5s linear alternate;
+  -webkit-animation: FadeIn 1.5s linear;
+}
+
+.FadeOut{
+  animation: FadeOut 1s linear alternate;
+  -webkit-animation: FadeOut 1s linear;
+}
+
 @keyframes InUP {
   0% {
     top: -200px;
@@ -247,6 +257,24 @@
   }
   100% {
     top: -200 !important;
+  }
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

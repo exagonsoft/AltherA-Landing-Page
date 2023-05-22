@@ -105,10 +105,10 @@ body {
 }
 
 .gradient-bg-welcome {
-  background-color: #000644;
+  background-color: #020744;
   background-image: radial-gradient(
       at 100% 100%,
-      #000644 0,
+      #020744 0,
       transparent 50%
     ),
     radial-gradient(at 200% 0%, hsl(224.7, 38.6%, 30%) 0, transparent 50%),

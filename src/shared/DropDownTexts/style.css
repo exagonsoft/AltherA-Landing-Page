@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.transition-height {
+  transition-property: height;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+.hover\:shadow-glow:hover {
+    transition: box-shadow 0.3s ease-in-out;
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+
+.GlowingShadow {
+  box-shadow: 4px 4px 4px #45498c8a;
+}
