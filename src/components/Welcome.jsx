@@ -10,6 +10,7 @@ import {
 
 import WelcomeSpinner from "./WellComeComponents/WelcomeSpinner";
 import "./WellComeComponents/style.css"
+import WhitePaper from "../assets/Documents/AltherA White Paper.pdf"
 
 const Welcome = () => {
   const [showDivs, setShowDivs] = useState(false);
@@ -83,12 +84,12 @@ const Welcome = () => {
                 </p>
                 <p>Join Community</p>
               </div>
-              <div className="navBarButton md:mb-0 mb-4 text-center flex justify-center bg-[#4a89e7] py-4 px-10  rounded-md cursor-pointer hover:bg-[#6877ca] hover:text-black">
+              <a href={WhitePaper} target="_blank" className="navBarButton md:mb-0 mb-4 text-center flex justify-center bg-[#4a89e7] py-4 px-10  rounded-md cursor-pointer hover:bg-[#6877ca] hover:text-black">
                 <p className="flex items-center mr-1 text-xl">
                   <FaBook />
                 </p>
                 <p>White Paper</p>
-              </div>
+              </a>
             </div>
           </div>
           <div className={` flex flex-1 justify-center items-center flex-col md:mr-10 ${showDivs ? 'anim-from-right-hide' : 'anim-from-right'}`}>
