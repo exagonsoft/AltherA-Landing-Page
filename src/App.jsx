@@ -59,13 +59,13 @@ function App() {
         closeToast={removeToast}
       ></EXNotification>
       <div className="min-h-screen overflow-x-hidden">
-        <div className="gradient-bg-welcome">
+        {/* <div className="gradient-bg-welcome">
           <NavBar id="fixed" navClass={fixedNav} />
           <NavBar id="dinamic" navClass={steakNav} />
           <Welcome />
         </div>
-        <About play={playAboutVideo}/>
-        {/* <Maintain speenerWith={"70%"} speenerMinWidt={"60%"} /> */}
+        <About play={playAboutVideo}/> */}
+        <Maintain speenerWith={"70%"} speenerMinWidt={"60%"} />
       </div>
     </>
   );

@@ -28,11 +28,11 @@ const Maintain = () => {
         params
       );
       setIsSubmitting(false);
-      pushNotification('success', "Successfuly Subscrived");
+      pushNotification('success', "Successfully Subscribed");
       console.log("Success", _result.statusText);
     } catch (error) {
       console.log("Failure", error.message);
-      pushNotification('error', "Email allready subscrived");
+      pushNotification('error', "Email already subscribed");
       setIsSubmitting(false);
     }
   };
@@ -70,7 +70,7 @@ const Maintain = () => {
                   <div className="w-full p-8 mt-5 bg-[#7e858d2c] rounded-xl">
                     <div className="text-center mb-4">
                       <h1 className="SpecialText text-xl text-white">
-                        Want to Know More... Subcrive
+                        Want to Know More... Subscribe
                       </h1>
                     </div>
                     <div className="flex md:flex-row flex-col md:justify-between  items-center">
@@ -88,7 +88,7 @@ const Maintain = () => {
                           <p className="flex items-center mr-1 text-xl">
                             <BsPeopleFill />
                           </p>
-                          Subscrive
+                          Subscribe
                         </button>
                       )}
                     </div>
